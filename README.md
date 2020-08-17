@@ -1,4 +1,5 @@
-<include a CircleCI status badge, here>
+
+[![<ORG_NAME>](https://circleci.com/gh/ivan-penchev/ml-microservice-kubernetes.svg?style=svg)](https://circleci.com/gh/ivan-penchev/ml-microservice-kubernetes)
 
 ## Project Overview
 
