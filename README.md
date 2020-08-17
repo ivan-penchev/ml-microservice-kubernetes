@@ -27,6 +27,10 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ## Setup the Environment
 
 * Create a virtualenv and activate it
+```sh
+python3 -m venv ~/.ml-microservice-kubernetes
+source ~/.ml-microservice-kubernetes/bin/activate
+```
 * Run `make install` to install the necessary dependencies
 
 ### Running `app.py`
@@ -34,6 +38,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+4. Make predictions: `./make_prediction.sh`
 
 ### Kubernetes Steps
 
@@ -41,3 +46,18 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+### Files included:
+
+* `.circleci` - circleci config scripts
+* `model_data` - ML model related data (model, csv data)
+* `output_txt_files` - project output files (docker, kubernetes)
+    * `docker_out.txt` - run_docker.sh output
+    * `kubernetes_out.txt` - run_kubernetes.sh output
+* `app.py` - Flask entry point file
+* `Dockerfile` - Docker image config
+* `make_prediction.sh` - script to make prediction via HTTP POST 
+* `Makefile` - common commands
+* `requirements.txt` - web application dependencies (python, libraries)
+* `run_docker.sh` - script to run web app in docker container 
+* `run_kubernetes.sh` - script to run web app in kubernetes
+* `upload_docker.sh` - script to upload docker image to docker hub 
